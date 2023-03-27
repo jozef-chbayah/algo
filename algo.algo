@@ -1,0 +1,23 @@
+ALGORITHM Checkpoint_Algo
+VAR
+    C : INTEGER := 0; //The length of the sentence
+    W : INTEGER := 1; //The number of words in the sentence
+    V : INTEGER := 0; //The number of vowels in the sentence
+    CH : CHAR ; 
+    sent: STRING :="Hello world."
+BEGIN
+    Read(sent)
+    WHILE (CH<>".") DO
+        CH=sent[C];
+        C=C+1;
+        IF (CH==" ") THEN
+        W=W+1;
+        END_IF
+        IF (CH=="a" or CH=="e" or CH=="i" or CH=="o" or CH=="u" or CH=="y" ) THEN
+        V=V+1;
+        END_IF
+
+    END_WHILE
+    write (c-w-1) //Nombre de total ch - les espaces
+    write (w) //Nombre de words
+    write (v)
